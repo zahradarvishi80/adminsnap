@@ -1,0 +1,23 @@
+## This file need predefined variable called SSH IN global-command scop
+config:server:
+  image:
+    name: ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/ha3an/ubuntussh
+  stage: config
+  variables:
+    SSH: ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ${CD_TEST_DEPLOYMENT_USER}@${CD_TEST_DEPLOYMENT_URL}
+    GIT_STRATEGY: none
+
+  only:
+    - master
+  when: manual
+  before_script:
+    - cp ${CD_TABAN_DEPLOYMENT_KEY} ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+  script:
+    - ${SSH} "apt-get update -yqq"
+    # - ${SSH} "apt-get remove -yqq docker docker-engine docker.io containerd runc"
+    - ${SSH} "apt-get install -yqq curl apt-transport-https ca-certificates curl gnupg-agent software-properties-common"
+    - ${SSH} "curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -"
+    - ${SSH} "add-apt-repository 'deb [arch=amd64] https://download.docker.com/linux/ubuntu' $(lsb_release -cs) stable"
+    - ${SSH} "apt-get update -yqq"
+    - ${SSH} "apt-get install -yqq docker-ce docker-ce-cli containerd.io"

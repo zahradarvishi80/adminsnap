@@ -1,0 +1,11 @@
+{
+  "home": "خانه",
+  "logIn": "ورود",
+  "username": "نام کاربری",
+  "password": "کلمه عبور",
+  "toastText": "نام کاربری یا گذرواژه اشتباه است ",
+  "theUsernameIsRequired": "نام کاربری اجباریست",
+  "thePasswordIsRequired": "گذرواژه اجباریست",
+  "itMustBeAtLeast6Digit": "گذرواژه حداقل ۶ رقم باید باشد",
+  "toastTile": "اخطار"
+}

@@ -1,0 +1,9 @@
+check:spell:
+  stage: check
+  allow_failure: true
+  image:
+    name: ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/python:3.8
+  before_script:
+    - pip install codespell
+  script:
+    - codespell -S "vendor,.git,composer*,package*" -f

@@ -1,0 +1,25 @@
+include:
+  - local: "/.gitlab/cicd/deploy/deploy-template.yml"
+deploy:production:
+  extends: .deploy_template
+  needs:
+    - "build:production:image"
+
+  environment:
+    name: production
+
+  script:
+    # tack down application
+    # change env setting for new application image
+    # pull new image
+    # run application on new version
+    - >
+      ssh \
+       -i ~/.ssh/id_rsa \
+       -o StrictHostKeyChecking=no \
+       ${CD_PRODUCTION_DEPLOYMENT_USER}@${CD_PRODUCTION_DEPLOYMENT_URL} \
+         "cd ${CD_PRODUCTION_PATH} && \
+         ./generate-env ${CD_PRODUCTION_HOSTS} $CI_REGISTRY_IMAGE:$CI_COMMIT_TAG && \
+         ./runner down && \
+         ./runner pull && \
+         ./runner up -d"

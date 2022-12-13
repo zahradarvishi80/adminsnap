@@ -1,0 +1,36 @@
+deploy:develop:
+  stage: deploy
+  needs:
+    - "test:local"
+  image:
+    name: ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/ubuntu:focal
+  variables:
+    GIT_STRATEGY: none
+  before_script:
+    - apt-get -y update
+    - apt-get install -yqq openssh-client
+    - mkdir ~/.ssh/
+    - chmod 700 ~/.ssh/
+    - cp ${CD_TABAN_DEPLOYMENT_KEY} ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+    - >
+      ssh \
+       -i ~/.ssh/id_rsa \
+       -o StrictHostKeyChecking=no \
+       ${CD_TEST_DEPLOYMENT_USER}@${CD_TEST_DEPLOYMENT_URL} \
+       "docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY"
+  script:
+    # tack down application
+    # change env setting for new application image
+    # pull new image
+    # run application on new version
+    - >
+      ssh \
+       -i ~/.ssh/id_rsa \
+       -o StrictHostKeyChecking=no \
+       ${CD_TEST_DEPLOYMENT_USER}@${CD_TEST_DEPLOYMENT_URL} \
+         "cd /var/application/test && \
+         ./runner down && \
+         ./generate-env test.taban.xyz $CI_REGISTRY_IMAGE:testing && \
+         ./runner pull && \
+         ./runner up -d"

@@ -1,0 +1,69 @@
+@import "./config/bootstrap/custom.scss";
+
+@font-face {
+  font-family: "iran-snas";
+  src: local("iran-snas"),
+    url("./assets/fonts/IranianSans.ttf") format("truetype");
+}
+
+body {
+  font-family: "iran-snas";
+}
+
+.taban-h-100 {
+  height: 100vh;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.app-loader {
+  height: 100vh;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: #000000aa;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.app-loader-logo {
+  height: 200px;
+  width: 200px;
+  animation: logo-movement 2s infinite ease-in-out;
+}
+@keyframes logo-movement {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.app-loader-text {
+  width: 0ch;
+  overflow: hidden;
+  color: white;
+  border-right: solid 3px black;
+  animation: text-write 10s infinite ease-in-out;
+}
+@keyframes text-write {
+  0% {
+    width: 0ch;
+  }
+  50% {
+    width: 10ch;
+  }
+  100% {
+    width: 0ch;
+  }
+}

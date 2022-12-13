@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+projectName="web_marketplace"
+docker-compose --project-name ${projectName} $@

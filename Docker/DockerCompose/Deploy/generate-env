@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+projectName="admin_snap"
+
+echo "PROJECT_NAME='${projectName}'" > .env
+echo "HOST='${1:-admin.snap.taban.xyz}'" >> .env
+echo "IMAGE='${2:-nginx}'" >> .env
+

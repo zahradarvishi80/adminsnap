@@ -1,0 +1,10 @@
+{
+  "inputFirstSMSLabel": "نشانه",
+  "inputFirstSMSPlaceholder": "نشانه",
+  "inputSecondSMSLabel": "فرستنده",
+  "inputSecondSMSPlaceholder": "فرستنده",
+  "validationEmptyInput": "پر کردن این فیلد الزامی می باشد",
+  "SubmitTextButton": "ویرایش کردن",
+  "home": "خانه",
+  "sms": "پیامک"
+}

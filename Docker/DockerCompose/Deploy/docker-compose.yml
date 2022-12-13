@@ -1,0 +1,27 @@
+# it's docker compose file for run on test server
+# please run this file with runner
+# for run this file we need the .env file that contained below variable
+
+# HOST
+# IMAGE
+
+version: "3"
+
+services:
+  webapp:
+    image: ${IMAGE}
+    working_dir: /var/www/app
+    environment:
+      VIRTUAL_HOST: ${HOST}
+      #            LETSENCRYPT_HOST: ${HOST}
+      LETSENCRYPT_EMAIL: "cert@taban.xyz"
+    expose:
+      - 80
+    restart: always
+    networks:
+      - app
+
+networks:
+  app:
+    external:
+      name: nginx-proxy

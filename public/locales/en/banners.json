@@ -1,0 +1,19 @@
+{
+  "buttonDeactivateBannerTitle": "Deactivate",
+  "buttonActivateBannerTitle": "Activate",
+  "buttonGoDetailsBannerTitle": "Go Details",
+  "buttonEditBannerTitle": "Edit",
+  "buttonNewBannerTitle": "New",
+  "inputFirstLabelTitle": "Title",
+  "inputFirstPlaceholder": "title",
+  "SubmitTextButton": "Create",
+  "bannerDescriptionActivate": "Banner Activated Successfully",
+  "bannerDescriptionDeactivate": "Banner Deactivated Successfully",
+  "setting": "Setting",
+  "banner": "Banner",
+  "bannerId": "Banner-Id",
+  "home": "Home",
+  "BannerPageEdit": "Banner Page Edit",
+  "BannerPageShow": "Banner Page Show",
+  "title": "title"
+}

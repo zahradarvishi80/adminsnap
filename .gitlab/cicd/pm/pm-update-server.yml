@@ -1,0 +1,7 @@
+pm:update:server:
+  stage: pm
+  only:
+    - master
+  when: manual
+  script:
+    - echo "some"

@@ -1,0 +1,10 @@
+{
+  "inputFirstSMSLabel": "Token",
+  "inputFirstSMSPlaceholder": "token",
+  "inputSecondSMSLabel": "Sender",
+  "inputSecondSMSPlaceholder": "sender",
+  "validationEmptyInput": "Filling This Field Is Mandatory",
+  "SubmitTextButton": "Edit",
+  "home": "Home",
+  "sms": "SMS"
+}

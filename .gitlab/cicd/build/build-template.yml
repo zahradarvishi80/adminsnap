@@ -1,0 +1,27 @@
+.build_template:
+  stage: build
+  image:
+    name: registry.taban.xyz/docker/docker/ha3an/builder:react
+    pull_policy: always
+  cache:
+    paths:
+      - node_module
+  needs:
+    - generate:env
+  artifacts:
+    paths:
+      - build
+  variables:
+    # PRODUCTION_API_URL
+    REACT_APP_API_URL: ${PRODUCTION_API_URL}
+    REACT_APP_VERSION: ${APP_VERSION}
+  before_script:
+    - echo "REACT_APP_API_URL=${REACT_APP_API_URL}" > .env
+    - echo "REACT_APP_VERSION=${REACT_APP_VERSION}" >> .env
+    - echo "NODE_ENV=production" >> .env
+
+    - yarn config set yarn-offline-mirror /npm-packages-offline-cache
+    # - npx browserslist@latest --update-db
+  script:
+    - yarn install --offline
+    - CI='' yarn build

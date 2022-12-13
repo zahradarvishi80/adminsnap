@@ -1,0 +1,17 @@
+# this step build for developers server
+include:
+  - local: "/.gitlab/cicd/build/build-template.yml"
+  - local: "/.gitlab/cicd/build/build-image-template.yml"
+build:test:
+  extends: .build_template
+  environment:
+    name: test
+  variables:
+    TEST_ONE: "IN BUILD TEST"
+
+build:test:image:
+  extends: .build_image_template
+  environment:
+    name: test
+  needs:
+    - "build:test"

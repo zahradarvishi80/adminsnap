@@ -1,0 +1,46 @@
+version: "3"
+
+services:
+  backend:
+    container_name: ${PROJECT_NAME}backend
+    image: ha3an/laravelphp7:node12
+    working_dir: /var/www/app
+    environment:
+      UID_WWW_DATA: "502"
+      GID_WWW_DATA: "20"
+      VIRTUAL_HOST: ${WEB_HOSTS}
+      LETSENCRYPT_HOST: ${WEB_HOSTS}
+      LETSENCRYPT_EMAIL: cert@taban.xyz
+
+    env_file:
+      - ./.env
+    volumes:
+      - ./../../..:/var/www/app
+      - ./storage:/var/www/app/storage
+    expose:
+      - 80
+    restart: always
+    links:
+      - database
+    depends_on:
+      - database
+    networks:
+      - app
+
+  database:
+    container_name: ${PROJECT_NAME}db
+    image: mysql
+    expose:
+      - 3306
+    volumes:
+      - "./mysql:/var/lib/mysql"
+    env_file:
+      - ./.env
+    restart: always
+    networks:
+      - app
+
+networks:
+  app:
+    external:
+      name: nginx-proxy

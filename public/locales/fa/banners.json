@@ -1,0 +1,19 @@
+{
+  "buttonDeactivateBannerTitle": "غیر فعال",
+  "buttonActivateBannerTitle": "فعال",
+  "buttonGoDetailsBannerTitle": "جزییات",
+  "buttonEditBannerTitle": "ویرایش",
+  "buttonNewBannerTitle": "جدید",
+  "inputFirstLabelTitle": "عنوان",
+  "inputFirstPlaceholder": "عنوان",
+  "SubmitTextButton": "ایجاد کردن",
+  "bannerDescriptionActivate": "بنر با موفقیت فعال شد",
+  "bannerDescriptionDeactivate": "بنر با موفقیت غیر فعال شد",
+  "setting": "نظیمات",
+  "banner": "بنر",
+  "bannerId": "شماره بنر",
+  "home": "خانه",
+  "BannerPageEdit": "ویرایش صفحه بنر",
+  "BannerPageShow": "نمایش صفحه بنر",
+  "title": "عنوان"
+}

@@ -1,0 +1,18 @@
+{
+  "home": "خانه",
+  "orders": "سفارشات",
+  "orderNumber": "شماره فاکتور",
+  "payment": "پرداختی ها",
+  "paymentId": "شماره پرداخت",
+  "port": "پورت",
+  "amount": "مقدار",
+
+  "bankId": "کد بانک",
+  "callbackLink": "لینک ارجاع",
+  "createdAt": "تاریخ ایجاد",
+  "updatedAt": "تاریخ بروزرسانی",
+  "status": "وضعیت",
+  "bankInfo": "اطلاعات بانک",
+  "ipAddress": "آدرس مرجع",
+  "time": "ساعت"
+}

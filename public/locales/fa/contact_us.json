@@ -1,0 +1,13 @@
+{
+  "home": "خانه",
+  "contactUs": "تماس با ما",
+
+  "inputFirstLabel": "شماره تلفن های همراه",
+  "inputFirstPlaceholder": "شماره تلفن همراه",
+  "inputSecondLabel": "آدرس",
+  "inputSecondPlaceholder": "آدرس",
+  "buttonAddPhoneNumber": "اضافه کردن",
+  "errorForEmptyInput": "پر کردن این فیلد الزامی می باشد",
+  "inputAddressMinTextError": "آدرس نباید کمتر از ۱۰ کاراکتر باشد",
+  "SubmitTextButton": "ذخیره "
+}

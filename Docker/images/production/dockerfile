@@ -1,0 +1,22 @@
+
+# ARG dependency_proxy="docker.io/"
+
+# FROM ${dependency_proxy}node:17.6.0 as nodeBuilder
+
+# WORKDIR /var/www/app
+
+# COPY ./ /var/www/app
+
+# RUN rm -rf node_module
+# RUN yarn install
+# RUN npx browserslist@latest --update-db
+# RUN yarn build
+
+# FROM ${dependency_proxy}nginx:1.20.2
+FROM registry.taban.xyz/docker/docker/ha3an/nginx:latest
+
+#COPY --from=nodeBuilder /var/www/app/build /var/www/app
+COPY  ./build /var/www/app
+
+COPY ./Docker/images/production/nginxDefaultConfig.conf /etc/nginx/sites-enabled/default
+COPY ./Docker/images/production/nginxDefaultConfig.conf /etc/nginx/conf.d/default.conf

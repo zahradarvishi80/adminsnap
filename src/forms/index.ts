@@ -1,0 +1,12 @@
+export * as LoginForm from "./login";
+export * as VerificationForm from "./verification";
+export * as SignUpForm from "./signup";
+export * as CategoryForm from "./category";
+export * as AdminForm from "./admin";
+export * as DriverForm from "./driver";
+export * as AuthForm from "./auth";
+export * as BannerForm from "./banner";
+export * as AnswerCommentForm from "./single-form-input";
+export * as SMSForm from "./sms";
+export * as ContactUsForm from "./contact-us";
+export * as IdPayForm from "./id-pay";

@@ -1,0 +1,11 @@
+{
+  "home": "Home",
+  "logIn": "Log In",
+  "username": "Username",
+  "password": "password",
+  "toastText": "The UserName Or The Password Is Wrong",
+  "theUsernameIsRequired": "the Username Is Required",
+  "thePasswordIsRequired": "the Password Is Required",
+  "itMustBeAtLeast6Digit": "it Must Be At Least 6 Digit",
+  "toastTile": "WARNING"
+}

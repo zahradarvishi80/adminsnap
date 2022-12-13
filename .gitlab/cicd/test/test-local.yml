@@ -1,0 +1,25 @@
+test:local:
+  stage: test
+  needs:
+    - "build:local"
+  allow_failure: false
+  image:
+    name: $CI_REGISTRY_IMAGE:testing
+  services:
+    - name: ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/mysql:latest
+      alias: mysql
+  variables:
+    # Configure mysql environment variables (https://hub.docker.com/_/mysql/)
+    GIT_STRATEGY: none
+    MYSQL_DATABASE: test
+    MYSQL_ROOT_PASSWORD: password
+
+  before_script:
+    - cd /var/www/app
+    - cp .env.testing .env
+    - php artisan key:generate
+    - php artisan config:cach
+    - php artisan migrate
+    - php artisan db:seed
+  script:
+    - php artisan test

@@ -1,0 +1,12 @@
+check:prettier:
+  stage: check
+  allow_failure: true
+  when: manual
+  environment:
+    name: "production"
+  image:
+    name: ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/node:17.6.0
+  before_script:
+    - npm install --global prettier @prettier/plugin-php
+  script:
+    - npx prettier --check .

@@ -1,0 +1,16 @@
+/* make the customizations */
+$theme-colors: (
+  "primary": #6610f2,
+  "secondary": #ef4f4f,
+  "success": #198754,
+  "info": #0d6efd,
+  "warning": #ffc107,
+  "danger": #dc3545,
+  "light": #f6f6f6,
+  "dark": #000000,
+);
+
+$breadcrumb-divider: quote(">");
+
+/* import bootstrap to set changes */
+@import "~bootstrap/scss/bootstrap";

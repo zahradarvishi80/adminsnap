@@ -1,0 +1,9 @@
+include:
+  - local: "/.gitlab/cicd/deploy/deploy-template.yml"
+
+deploy:test:
+  extends: .deploy_template
+  needs:
+    - "build:test:image"
+  environment:
+    name: test

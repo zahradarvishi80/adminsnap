@@ -1,0 +1,20 @@
+{
+  "buttonDeactivateSocialMediaTitle": "غیر فعال",
+  "buttonActivateSocialMediaTitle": "فعال",
+  "buttonGoDetailsSocialMediaTitle": "جزییات",
+  "buttonEditSocialMediaTitle": "ویرایش",
+  "buttonNewSocialMediaTitle": "جدید",
+  "inputFirstLabelTitle": "عنوان",
+  "inputFirstPlaceholder": "عنوان",
+  "SubmitTextButton": "ایجاد کردن",
+  "socialMediaDescriptionActivate": "رسانه اجتماعی با موفقیت فعال شد",
+  "socialMediaDescriptionDeactivate": "رسانه اجتماعی با موفقیت غیر فعال شد",
+  "home": "خانه",
+  "socialMedia": "رسانه های اجتماعی",
+  "socialMediaName": "اسم",
+  "SocialMediaPageEdit": "ویراش صفحه رسانه های اجتماعی",
+  "SocialMediaPageShow": "نمایش صفحه رسانه های اجتماعی ",
+  "inputTextRequired": "پر کردن این فیلد احباریست",
+  "minMassageTitle": "باید حداقل ۳ حرف باشد",
+  "maxMassageTitle": "باید حداکثر 256 حرف باشد "
+}

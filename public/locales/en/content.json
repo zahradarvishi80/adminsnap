@@ -1,0 +1,6 @@
+{
+  "Uploading": "Uploading...",
+  "contents": "contents",
+  "contentText": "*.jpeg *.jpg *.png",
+  "contentSizeError": "Your file size should not exceed 2 MB"
+}

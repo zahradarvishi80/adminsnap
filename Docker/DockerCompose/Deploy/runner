@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+projectName="admin_snap"
+
+docker-compose --project-name ${projectName} $@

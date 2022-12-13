@@ -1,0 +1,12 @@
+{
+  "user": "user",
+  "comment": "comment",
+  "buttonGoDetailsAdminTitle": "Go Details",
+  "firstName": "First Name",
+  "lastName": "Last Name",
+  "phoneNumber": "Phone Number",
+  "id": "Id",
+  "home": "Home",
+  "ticket": "Ticket",
+  "ticketId": "Ticket_Id_"
+}

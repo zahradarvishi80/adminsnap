@@ -1,0 +1,21 @@
+{
+  "buttonDeactivateSocialMediaTitle": "Deactivate",
+  "buttonActivateSocialMediaTitle": "Activate",
+  "buttonGoDetailsSocialMediaTitle": "Go Details",
+  "buttonEditSocialMediaTitle": "Edit",
+  "buttonNewSocialMediaTitle": "New",
+  "inputFirstLabelTitle": "Title",
+  "inputFirstPlaceholder": "title",
+  "SubmitTextButton": "Create",
+  "socialMediaDescriptionActivate": "Social Media Activated Successfully",
+  "socialMediaDescriptionDeactivate": "Social Media Deactivated Successfully",
+  "home": "Home",
+  "socialMedia": "Social-Media",
+  "socialMediaName": "Social-Media-Name",
+  "SocialMediaPageEdit": "Social Media Page Edit",
+  "SocialMediaPageShow": "Social Media Page Show",
+  "inputTextRequired": "This Field Is Required",
+
+  "minMassageTitle": "it should be at least 3 letter",
+  "maxMassageTitle": "it should be at most 256 letter "
+}

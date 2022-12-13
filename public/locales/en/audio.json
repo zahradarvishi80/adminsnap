@@ -1,0 +1,17 @@
+{
+  "home": "Home",
+  "post": "Post",
+  "postNumber": "Post  Number -",
+  "audio": "Audio",
+  "titleAudio": "Title",
+  "voices": "Voices",
+  "delete": "Delete",
+  "fileName": "File Name",
+  "notSupport": " Your browser does not support the audio element.",
+  "create": "create",
+  "addVoices": "Add Voice",
+  "inputTextRequired": "This Field Is Required",
+  "notVoiceMassage": "No Voice Is Added",
+  "toastMassage": "Please Select Only MP3 Files",
+  "toastTitle": "Warnning"
+}

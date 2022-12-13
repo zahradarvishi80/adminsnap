@@ -1,0 +1,17 @@
+{
+  "home": "خانه",
+  "post": "پست",
+  "postNumber": "شماره پست -",
+  "audio": "فایل صوتی",
+  "titleAudio": "عنوان",
+  "voices": "فایل های صوتی",
+  "delete": "حذف",
+  "fileName": "نام فایل",
+  "notSupport": " پخش فایل در مرورگر شما پشتیبانی نمی شود",
+  "addVoices": "اضافه کردن فایل صوتی",
+  "inputTextRequired": "پر کردن این فیلد اجباریست",
+  "create": "جدید",
+  "notVoiceMassage": " فایل صوتی ای  اضافه نشده است ",
+  "toastMassage": "لطفا فقط فایل هایی با پسوند mp3 انتخاب کنید",
+  "toastTitle": " اخطار"
+}

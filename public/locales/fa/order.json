@@ -1,0 +1,26 @@
+{
+  "factor_number": "شماره فاکتور",
+  "status": "وضعیت",
+  "last_name": "last name",
+  "user_name": "نام کاربری",
+  "total_price": "جمع کل",
+  "discount": "تخفیف",
+  "final_price": "قیمت نهایی",
+  "Go_Details": "جزيیات",
+  "product": "عنوان محصول",
+  "price": "قیمت",
+  "count": "تعداد",
+  "product_id": "کد محصول",
+  "amount": "مبلغ",
+  "description": "توضیحات",
+  "total_of_price": "جمع کل",
+  "off_price": "تخفیف",
+  "details": "توضیحات",
+  "home": "خانه",
+  "orders": "سفارشات",
+
+  "UserPageEdit": "ویرایش صفحه کاربر",
+  "UserPageNew": "ایجاد کاربر جدید",
+  "orderNumber": "شماره فاکتور-",
+  "payment": "پرداختی ها"
+}

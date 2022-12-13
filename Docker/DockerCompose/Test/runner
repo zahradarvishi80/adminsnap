@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+projectName="bazyaft_taban"
+docker-compose --project-name ${projectName} $@

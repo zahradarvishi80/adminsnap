@@ -1,0 +1,19 @@
+{
+  "home": "Home",
+  "orders": "Orders",
+  "orderNumber": "Order_Id_",
+  "payment": "Payment",
+
+  "paymentId": "Payment_Id",
+  "port": "Port",
+  "amount": "Amount",
+
+  "bankId": "Bank Id",
+  "callbackLink": "Callback Link",
+  "createdAt": "Created At",
+  "updatedAt": "Updated At",
+  "status": "Status",
+  "bankInfo": "Bank Info",
+  "ipAddress": "Ip Address",
+  "time": "time"
+}

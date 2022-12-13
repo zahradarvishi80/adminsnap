@@ -1,0 +1,38 @@
+.deploy_template:
+  stage: deploy
+  # when: manual
+  needs:
+    - "build:production"
+  image:
+    name: ha3an/openssh-client
+    pull_policy: if-not-present
+  variables:
+    GIT_STRATEGY: none
+    SSH_USER: "${CD_PRODUCTION_DEPLOYMENT_USER}@${CD_PRODUCTION_DEPLOYMENT_URL}"
+    SSH_COMMAND: "ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no $SSH_USER "
+    SSH_CP: "scp -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no"
+
+  environment:
+    name: production
+
+  before_script:
+    - mkdir ~/.ssh/
+    - chmod 700 ~/.ssh/
+    - cp ${CD_TABAN_PRODUCTION_DEPLOYMENT_KEY} ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+    - $SSH_COMMAND "docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY"
+  script:
+    # tack down application
+    # change env setting for new application image
+    # pull new image
+    # run application on new version
+    - >
+      ssh \
+       -i ~/.ssh/id_rsa \
+       -o StrictHostKeyChecking=no \
+       ${CD_PRODUCTION_DEPLOYMENT_USER}@${CD_PRODUCTION_DEPLOYMENT_URL} \
+         "cd ${CD_PRODUCTION_PATH} && \
+         ./generate-env ${CD_PRODUCTION_HOSTS} $CI_REGISTRY_IMAGE:latest && \
+         ./runner down && \
+         ./runner pull && \
+         ./runner up -d"
